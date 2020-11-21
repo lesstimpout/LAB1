@@ -20,14 +20,6 @@
         <url-pattern>/authorization</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>SelectServlet</servlet-name>
-        <servlet-class>crud.SelectServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>SelectServlet</servlet-name>
-        <url-pattern>/select</url-pattern>
-    </servlet-mapping>
-    <servlet>
         <servlet-name>UpdateAgentServlet</servlet-name>
         <servlet-class>crud.UpdateAgentServlet</servlet-class>
     </servlet>

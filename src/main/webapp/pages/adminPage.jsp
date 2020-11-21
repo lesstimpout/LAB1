@@ -60,7 +60,7 @@
         }
     </style>
 </head>
-<body text-align="center">
+<body>
 <h2>Клиенты</h2>
     <table>
         <tr align='center'>
@@ -86,13 +86,13 @@
         <td>
             <form action="/updateClient" method="get">
                 <input type="hidden" name="clientId" value="<%=clients.get(i).getId()%>">
-                <input type="submit" value="Изменить">
+                <input class="butt" type="submit" value="Изменить">
             </form>
         </td>
         <td>
             <form action="/deleteClient" method="get">
                 <input type="hidden" name="clientId" value="<%=clients.get(i).getId()%>">
-                <input type="submit" value="Удалить">
+                <input class="butt" type="submit" value="Удалить">
             </form>
         </td>
         </tr>
@@ -123,13 +123,13 @@
             <td>
                 <form action="/updateAgent" method="get">
                     <input type="hidden" name="agentId" value="<%=insuranceAgents.get(i).getId()%>">
-                    <input type="submit" value="Изменить">
+                    <input class="butt" type="submit" value="Изменить">
                 </form>
             </td>
             <td>
                 <form action="/deleteAgent" method="get">
                     <input type="hidden" name="agentId" value="<%=insuranceAgents.get(i).getId()%>">
-                    <input type="submit" value="Удалить">
+                    <input class="butt" type="submit" value="Удалить">
                 </form>
             </td>
         </tr>
@@ -160,13 +160,13 @@
     <td>
         <form action="/updateAgreement" method="get">
             <input type="hidden" name="agreementId" value="<%=agreements.get(i).getId()%>">
-            <input type="submit" value="Изменить">
+            <input class="butt" type="submit" value="Изменить">
         </form>
     </td>
     <td>
         <form action="/deleteAgreement" method="get">
             <input type="hidden" name="agreementId" value="<%=agreements.get(i).getId()%>">
-            <input type="submit" value="Удалить">
+            <input class="butt" type="submit" value="Удалить">
         </form>
     </td>
     </tr>
