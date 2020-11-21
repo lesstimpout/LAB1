@@ -1,8 +1,11 @@
 package tables;
 
+import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
+import java.io.Serializable;
 
-public class CommonTable {
+@SessionScoped
+public class CommonTable implements Serializable{
     @Inject
     ClientTable clientTable;
     @Inject
@@ -11,7 +14,7 @@ public class CommonTable {
     InsuranceAgentTable insuranceAgentTable;
 
     public ClientTable getClientTable() {
-        clientTable.getClients().forEach(c -> System.out.println(c.getName()+ " " + c.getLastName()));
+//        clientTable.getClients().forEach(c -> System.out.println(c.getName()+ " " + c.getLastName()));
         return clientTable;
     }
 

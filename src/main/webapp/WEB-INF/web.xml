@@ -27,4 +27,52 @@
         <servlet-name>SelectServlet</servlet-name>
         <url-pattern>/select</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>UpdateAgentServlet</servlet-name>
+        <servlet-class>crud.UpdateAgentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateAgentServlet</servlet-name>
+        <url-pattern>/updateAgent</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteAgentServlet</servlet-name>
+        <servlet-class>crud.DeleteAgentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteAgentServlet</servlet-name>
+        <url-pattern>/deleteAgent</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UpdateAgreementServlet</servlet-name>
+        <servlet-class>crud.UpdateAgreementServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateAgreementServlet</servlet-name>
+        <url-pattern>/updateAgreement</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteAgreementServlet</servlet-name>
+        <servlet-class>crud.DeleteAgreementServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteAgreementServlet</servlet-name>
+        <url-pattern>/deleteAgreement</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UpdateClientServlet</servlet-name>
+        <servlet-class>crud.UpdateClientServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateClientServlet</servlet-name>
+        <url-pattern>/updateClient</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteClientServlet</servlet-name>
+        <servlet-class>crud.DeleteClientServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteClientServlet</servlet-name>
+        <url-pattern>/deleteClient</url-pattern>
+    </servlet-mapping>
 </web-app>
