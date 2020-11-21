@@ -67,4 +67,28 @@
         <servlet-name>DeleteClientServlet</servlet-name>
         <url-pattern>/deleteClient</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>AddClientServlet</servlet-name>
+        <servlet-class>crud.AddClientServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddClientServlet</servlet-name>
+        <url-pattern>/addClient</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AddAgentServlet</servlet-name>
+        <servlet-class>crud.AddAgentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddAgentServlet</servlet-name>
+        <url-pattern>/addAgent</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AddAgreementServlet</servlet-name>
+        <servlet-class>crud.AddAgreementServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddAgreementServlet</servlet-name>
+        <url-pattern>/addAgreement</url-pattern>
+    </servlet-mapping>
 </web-app>

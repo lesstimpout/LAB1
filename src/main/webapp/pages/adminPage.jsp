@@ -80,9 +80,9 @@
                     %>
         <tr>
             <td><%=clients.get(i).getId()%></td>
-        <td><%=clients.get(i).getName()%></td>
-        <td><%=clients.get(i).getLastName()%></td>
-        <td><%=clients.get(i).getAgreementId()%></td>
+            <td><%=clients.get(i).getName()%></td>
+            <td><%=clients.get(i).getLastName()%></td>
+            <td><%=clients.get(i).getAgreementId()%></td>
         <td>
             <form action="/updateClient" method="get">
                 <input type="hidden" name="clientId" value="<%=clients.get(i).getId()%>">
@@ -99,6 +99,23 @@
                     <%
                 }
                 %>
+        <form action="/addClient" method="get">
+            <tr>
+                <td></td>
+                <td>
+                    <input type="text" name="addNameVal">
+                </td>
+                <td>
+                    <input type="text" name="addLastNameVal">
+                </td>
+                <td>
+                    <input type="text" name="addAgreementIdVal">
+                </td>
+                <td>
+                    <input class="butt" type="submit" value="Добавить">
+                </td>
+            </tr>
+        </form>
         </table>
         <h2>Страховые агенты</h2>
         <table>
@@ -136,6 +153,26 @@
         <%
             }
         %>
+            <form action="/addAgent" method="get">
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="text" name="addNameVal">
+                    </td>
+                    <td>
+                        <input type="text" name="addLastNameVal">
+                    </td>
+                    <td>
+                        <input type="text" name="addAgencyNameVal">
+                    </td>
+                    <td>
+                        <input type="text" name="addAgreementIdVal">
+                    </td>
+                    <td>
+                        <input class="butt" type="submit" value="Добавить">
+                    </td>
+                </tr>
+            </form>
         </tr>
     </table>
 
@@ -174,6 +211,23 @@
         }
     %>
     </tr>
+    <form action="/addAgreement" method="get">
+        <tr>
+            <td></td>
+            <td>
+                <input type="text" name="addAgreementNumberVal">
+            </td>
+            <td>
+                <input type="text" name="addClientIdVal">
+            </td>
+            <td>
+                <input type="text" name="addAgentIdVal">
+            </td>
+            <td>
+                <input class="butt" type="submit" value="Добавить">
+            </td>
+        </tr>
+    </form>
 </table>
 </body>
 </html>
