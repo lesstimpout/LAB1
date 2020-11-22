@@ -1,6 +1,8 @@
 package crud;
 
+import entities.Agreement;
 import entities.Client;
+import tables.AgreementTable;
 import tables.CommonTable;
 
 import javax.inject.Inject;
@@ -22,8 +24,10 @@ public class DeleteClientServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Client> clients = commonTable.getClientTable().getClients();
+        List<Agreement> agreements = commonTable.getAgreementTable().getAgreements();
         int id = Integer.parseInt(request.getParameter("clientId"));
         clients.removeIf(client -> client.getId() == id);
+        agreements.removeIf(agreement -> agreement.getClientId() == id);
         response.sendRedirect("pages/adminPage.jsp");
     }
 }

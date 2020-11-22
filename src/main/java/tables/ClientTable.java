@@ -3,12 +3,24 @@ package tables;
 import entities.Client;
 
 import javax.enterprise.context.SessionScoped;
+import javax.inject.Qualifier;
 import java.io.Serializable;
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.annotation.ElementType.*;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
+
+@Qualifier
+@Retention(RUNTIME)
+@Target({FIELD, TYPE, METHOD})
+@interface ClientAnnotation {}
+
 @SessionScoped
-public class ClientTable implements Serializable {
+@ClientAnnotation
+public class ClientTable implements Serializable, InsuranceElement {
     private List<Client> clients;
 
     public ClientTable() {

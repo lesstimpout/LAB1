@@ -1,28 +1,35 @@
 package tables;
 
 import javax.enterprise.context.SessionScoped;
+import javax.enterprise.inject.Produces;
 import javax.inject.Inject;
 import java.io.Serializable;
 
 @SessionScoped
 public class CommonTable implements Serializable{
     @Inject
-    ClientTable clientTable;
-    @Inject
-    AgreementTable agreementTable;
-    @Inject
-    InsuranceAgentTable insuranceAgentTable;
+    String tableName;
+    @Inject @ClientAnnotation
+    InsuranceElement clientTable;
+    @Inject @InsuranceAgentAnnotation
+    InsuranceElement insuranceAgentTable;
+    @Inject @AgreementAnnotation
+    InsuranceElement agreementTable;
 
     public ClientTable getClientTable() {
-//        clientTable.getClients().forEach(c -> System.out.println(c.getName()+ " " + c.getLastName()));
-        return clientTable;
+        return (ClientTable) clientTable;
     }
 
     public AgreementTable getAgreementTable() {
-        return agreementTable;
+        return (AgreementTable) agreementTable;
     }
 
     public InsuranceAgentTable getInsuranceAgentTable() {
-        return insuranceAgentTable;
+        return (InsuranceAgentTable) insuranceAgentTable;
     }
+}
+
+class CommonTableProducer{
+    @Produces
+    String tableName = "Таблицы клиентов, страховых агентов и соглашений";
 }

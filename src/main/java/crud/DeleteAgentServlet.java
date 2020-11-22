@@ -24,8 +24,10 @@ public class DeleteAgentServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<InsuranceAgent> agents = commonTable.getInsuranceAgentTable().getInsuranceAgents();
+        List<Agreement> agreements = commonTable.getAgreementTable().getAgreements();
         int id = Integer.parseInt(request.getParameter("agentId"));
         agents.removeIf(agent -> agent.getId() == id);
+        agreements.removeIf(agreement -> agreement.getClientId() == id);
         response.sendRedirect("pages/adminPage.jsp");
     }
 }
